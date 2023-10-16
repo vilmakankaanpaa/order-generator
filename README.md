@@ -1,10 +1,17 @@
 # Random Content Order Generator
-This generates a 
-- random order of items 
-- to be occurring equal number of times
-- that lasts the wished number of days
-- based on date of the days
-- starting from the given date in ISO format.
+(Crossover study design)
+This generates a dictionary with a date: item key-value pairs. The dictionary will have items in a random order suitable for a crossover study design.
+
+Let's say we have 5 conditions A,B,C,D,E. We want to iterate this group several times, so that each condition occurs the same amount of time, but in a random order. For example, to repeat each condition three times, the generated order might be ABCDE, CDEAB, EABDC.
+
+In addition, the generator takes an argument that describes for how many days each item should occurr, when it occurs. For example, we might want a condition A to occurr for 2 days instead of 1. Then the resulting dictionary will have conditions for each day in order like AABBCCDDEE, CCDDEEAABB, EEAABBDDCC.
+
+In short:
+- produces a dictionary with date-condition pairs
+- each date is assigned a condition
+- a given group of conditions will repeat, the conditions are in random order
+- when a condition occurs, it will stay same for a wished number of days
+- the dictionary starts from the given date in ISO format
 
 ## Testing the usage
 On terminal, enter your Python3 IDE in the same directory as the python file:
